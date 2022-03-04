@@ -15,4 +15,17 @@ object MockRepository {
 
         return moviesList
     }
+
+    fun getTvShows(): List<TvShow> {
+
+        val tvShowsList = mutableListOf<TvShow>()
+        for (x in 0..10) {
+            val tvShow = TvShow(
+                title = "Two pair of legs",
+                voteAverage = 10.0 - x
+            )
+            tvShowsList.add(tvShow)
+        }
+        return tvShowsList
+    }
 }
