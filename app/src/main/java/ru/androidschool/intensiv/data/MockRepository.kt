@@ -16,6 +16,14 @@ object MockRepository {
         return moviesList
     }
 
+    fun getMovieDetails(): MovieDetails = MovieDetails(
+        Movie(
+            title = "Aquaman",
+            voteAverage = 8.7
+        ),
+        description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    )
+
     fun getTvShows(): List<TvShow> {
 
         val tvShowsList = mutableListOf<TvShow>()
