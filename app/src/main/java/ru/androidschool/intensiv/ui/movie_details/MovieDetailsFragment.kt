@@ -5,10 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.squareup.picasso.Picasso
 import ru.androidschool.intensiv.R
 import ru.androidschool.intensiv.data.MockRepository
 import ru.androidschool.intensiv.databinding.MovieDetailsFragmentBinding
+import ru.androidschool.intensiv.ui.util.loadImage
 
 class MovieDetailsFragment : Fragment(R.layout.movie_details_fragment) {
 
@@ -33,20 +35,19 @@ class MovieDetailsFragment : Fragment(R.layout.movie_details_fragment) {
 
         binding.apply {
 
-            detailToolbar.setNavigationIcon(R.drawable.ic_arrow_back_24)
+            detailToolbar.setNavigationOnClickListener {
+                findNavController().popBackStack()
+            }
 
             with(details) {
-//                detailToolbar.title = movie.title
                 titleTextView.text = movie.title
                 descriptionTextView.text = description
                 showRating.rating = movie.rating
             }
-        }
 
-        // TODO Получать из модели
-        Picasso.get()
-            .load("https://m.media-amazon.com/images/M/MV5BYTk3MDljOWQtNGI2My00OTEzLTlhYjQtOTQ4ODM2MzUwY2IwXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg")
-            .into(binding.imageBanner)
+            // TODO Получать из модели
+            binding.imageBanner.loadImage("https://m.media-amazon.com/images/M/MV5BYTk3MDljOWQtNGI2My00OTEzLTlhYjQtOTQ4ODM2MzUwY2IwXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg")
+        }
 
     }
 }
