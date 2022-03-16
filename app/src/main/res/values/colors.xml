@@ -11,6 +11,7 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="grey">#C2C2C2</color>
+    <color name="dark_grey">#616873</color>
     <color name="transparent_grey">#CCFFFFFF</color>
 
 
@@ -18,6 +19,7 @@
     <color name="colorItemDisabled">#4a6e8a</color>
     <color name="textColorLight">#FFFFFF</color>
     <color name="textColorGrey">#999999</color>
+    <color name="textColorDarkGrey">#7E848C</color>
 
     <color name="favorite">#EC6E7D</color>
     <color name="selectedControlIndicator">#D6182A</color>
