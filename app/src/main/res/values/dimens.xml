@@ -19,5 +19,9 @@
     <dimen name="dimens_32">32dp</dimen>
     <dimen name="search_bar_height">56dp</dimen>
     <dimen name="min_height">100dp</dimen>
+    <dimen name="appbar_image_height">300dp</dimen>
+    <dimen name="margin_horizontal_medium">20dp</dimen>
+    <dimen name="dimens_12">12dp</dimen>
+    <dimen name="text_size_large">32sp</dimen>
 
 </resources>
